@@ -12,8 +12,6 @@ export const addOneContact = async () => {
     contacts.push(newContact);
 
     await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2), 'utf-8');
-
-    console.log('One new contact has been added.');
   } catch (error) {
     console.error('Error adding contact:', error);
   }
